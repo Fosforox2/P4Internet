@@ -23,8 +23,10 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    addPost(titulo: String!, contenido: String!, autor: String!, fecha: String!): Post!
     register(email: String!, password: String!): String!
     login(email: String!, password: String!): String!
+    addPost(titulo: String!, contenido: String!, autor: String!, fecha: String!): Post!
+    updatePost(id:String!, titulo: String!, contenido: String!, autor: String!, fecha: String!): Post!
+    deletePost(id:String!): String!
   }
 `;
